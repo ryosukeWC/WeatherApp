@@ -14,4 +14,6 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.gson.converter)
     implementation(libs.okhttp.logging)
+
+    testImplementation(libs.junit)
 }

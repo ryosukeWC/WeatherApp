@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gradient_263A99">#263A99</color>
+    <color name="gradient_565FCC">#565FCC</color>
+    <color name="gradient_FFC19E">#FFC19E</color>
+
+
+    <color name="item_black_text_color">#FF000000</color>
+    <color name="red_dot_color">#E53935</color>
+
+    <color name="gray_200">#EEEEEE</color>
+    <color name="blue_600">#1E88E5</color>
+    <color name="white">#FFFFFF</color>
+</resources>

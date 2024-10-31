@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Location view start -->
+
+    <View
+        android:id="@+id/location_container"
+        android:layout_width="190dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/location_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </View>
+
+    <ImageView
+        android:id="@+id/location_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/location_text"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/location_container"
+        app:layout_constraintTop_toTopOf="@id/location_container"
+        app:layout_constraintBottom_toBottomOf="@id/location_container"
+        android:src="@drawable/location_icon"
+        tools:ignore="ContentDescription">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/location_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:text="Ярославль, Россия"
+        android:textColor="@color/item_black_text_color"
+        android:fontFamily="@font/figtree_regular"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/location_container"
+        app:layout_constraintTop_toTopOf="@id/location_container"
+        app:layout_constraintStart_toEndOf="@+id/location_image"
+        app:layout_constraintBottom_toBottomOf="@id/location_container">
+
+    </TextView>
+
+    <!-- Location view end-->
+
+    <!-- Main card start-->
+
+    <View
+        android:id="@+id/main_card_container"
+        android:layout_width="match_parent"
+        android:layout_height="443dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/main_card_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location_container">
+
+    </View>
+
+    <!-- Top card start-->
+
+    <View
+        android:id="@+id/top_card_view"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:background="@drawable/semi_darkness"
+        app:layout_constraintEnd_toEndOf="@id/main_card_container"
+        app:layout_constraintStart_toStartOf="@id/main_card_container"
+        app:layout_constraintTop_toTopOf="@id/main_card_container">
+
+    </View>
+
+    <View
+        android:id="@+id/support_view_for_top_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginVertical="36dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/top_card_view"
+        app:layout_constraintStart_toStartOf="@id/top_card_view"
+        app:layout_constraintTop_toTopOf="@id/top_card_view"
+        app:layout_constraintBottom_toBottomOf="@id/top_card_view">
+
+    </View>
+
+    <TextView
+        android:id="@+id/today_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/figtree_semibold"
+        android:text="Сегодня"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/support_view_for_top_card"
+        app:layout_constraintTop_toTopOf="@id/support_view_for_top_card">
+    </TextView>
+
+    <TextView
+        android:id="@+id/date_and_time_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/figtree_regular"
+        android:layout_marginTop="4dp"
+        android:text="Minggu, 13 Des | 17:00"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/support_view_for_top_card"
+        app:layout_constraintTop_toBottomOf="@id/today_text_view">
+    </TextView>
+
+
+    <!-- Top card end-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/time_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@id/main_card_container"
+        app:layout_constraintStart_toStartOf="@id/main_card_container"
+        app:layout_constraintTop_toBottomOf="@id/top_card_view"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_time_weather">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <View
+        android:id="@+id/bottom_card_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/main_card_container"
+        app:layout_constraintEnd_toEndOf="@id/main_card_container"
+        app:layout_constraintStart_toStartOf="@id/main_card_container"
+        app:layout_constraintTop_toBottomOf="@id/time_recycler_view">
+
+    </View>
+
+    <TextView
+        android:id="@+id/bottom_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/figtree_medium"
+        android:gravity="center_vertical"
+        android:text="@string/transition_button_text"
+        android:textColor="@color/blue_600"
+        android:textSize="14sp"
+
+        app:layout_constraintBottom_toBottomOf="@id/bottom_card_view"
+        app:layout_constraintEnd_toStartOf="@+id/arrow_image"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/bottom_card_view"
+        app:layout_constraintTop_toTopOf="@id/bottom_card_view">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/arrow_image"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="6dp"
+        android:src="@drawable/arrow_icon"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_card_view"
+        app:layout_constraintEnd_toEndOf="@id/bottom_card_view"
+        app:layout_constraintStart_toEndOf="@+id/bottom_text_view"
+        app:layout_constraintTop_toTopOf="@id/bottom_card_view"
+        tools:ignore="ContentDescription">
+
+    </ImageView>
+
+    <!-- Main card end-->
+</androidx.constraintlayout.widget.ConstraintLayout>
+

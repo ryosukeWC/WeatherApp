@@ -27,6 +27,9 @@ android {
             )
         }
     }
+    buildFeatures {
+        viewBinding = true
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -43,6 +46,8 @@ dependencies {
 
     implementation(libs.okhttp)
 
+
+    implementation(libs.conductor)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -50,4 +55,5 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
 
     implementation(project(":core:weatherapi"))
+    implementation(project(":feature:weather-main:ui"))
 }
