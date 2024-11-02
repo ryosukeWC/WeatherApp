@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt.pligun)
 }
 
 android {
@@ -46,8 +47,6 @@ dependencies {
 
     implementation(libs.okhttp)
 
-
-    implementation(libs.conductor)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

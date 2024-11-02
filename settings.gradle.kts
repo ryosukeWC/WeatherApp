@@ -7,6 +7,7 @@ pluginManagement {
                 includeGroupByRegex("androidx.*")
             }
         }
+        google()
         mavenCentral()
         gradlePluginPortal()
     }
@@ -28,3 +29,4 @@ include(":feature:weather-main")
 include(":feature:weather-main:ui")
 include(":domain")
 include(":feature:location")
+include(":core:data")
