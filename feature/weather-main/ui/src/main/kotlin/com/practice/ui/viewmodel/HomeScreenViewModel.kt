@@ -20,7 +20,11 @@ class HomeScreenViewModel @Inject constructor(
     private val _state = MutableStateFlow<State>(State.None)
     val state : StateFlow<State> = _state
 
-    fun fetchData() {
+    init {
+        fetchData()
+    }
+
+    private fun fetchData() {
 
         _state.value = State.Loading
 

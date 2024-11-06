@@ -3,9 +3,9 @@ package com.practice.weatherapi.dto
 
 import com.google.gson.annotations.SerializedName
 
-data class WeatherData(
+data class WeatherDataDTO(
     @SerializedName("current")
-    val current: Current?,
+    val currentDTO: CurrentDTO?,
     @SerializedName("current_units")
     val currentUnits: CurrentUnits?,
     @SerializedName("daily")

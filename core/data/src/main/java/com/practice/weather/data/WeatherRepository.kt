@@ -1,13 +1,14 @@
 package com.practice.weather.data
 
+import com.practice.weather.data.model.RequestResult
+import com.practice.weather.data.model.WeatherData
 import com.practice.weatherapi.WeatherApi
-import com.practice.weatherapi.dto.WeatherData
 import javax.inject.Inject
 
 class WeatherRepository @Inject constructor(
     private val api : WeatherApi
 ) {
-    suspend fun getWeatherFromServer() : Result<WeatherData> {
-        return api.getData(50.5,32.5)
+    suspend fun getWeatherFromServer() : RequestResult<WeatherData> {
+        return api.getData(50.5,32.5).toRequestResultWeatherData()
     }
 }

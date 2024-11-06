@@ -1,5 +1,9 @@
 package com.practice.ui
 
+import com.practice.ui.model.WeatherDataUi
+import com.practice.weather.data.model.RequestResult
+import com.practice.weather.data.model.WeatherData
+
 sealed class State() {
 
     data object None : State()
@@ -8,5 +12,13 @@ sealed class State() {
 
     data class Error(val exception : String?) : State()
 
-    data class Success<T>(val data : T) : State()
+    data class Success(val data : WeatherDataUi) : State()
+}
+
+fun RequestResult<WeatherData>.toUiState() : State {
+    return when (this) {
+        is RequestResult.Loading -> State.Loading
+        is RequestResult.Success -> State.Success(data?.toWeatherDataUi()!!)
+        is RequestResult.Error -> State.Error(error ?: "Unknown exception")
+    }
 }

@@ -1,9 +1,12 @@
 package com.practice.ui
 
-fun Result<Any>.toUiState() : State {
-    return when {
-        isFailure -> State.Error(this.exceptionOrNull()?.message ?: "Unknown exception")
-        isSuccess -> State.Success(this.getOrThrow())
-        else -> State.None
-    }
+import com.practice.ui.model.CurrentUi
+import com.practice.ui.model.WeatherDataUi
+import com.practice.weather.data.model.WeatherData
+
+fun WeatherData.toWeatherDataUi() : WeatherDataUi {
+
+    val currentUi = CurrentUi(current.temperature2m)
+
+    return WeatherDataUi(currentUi)
 }

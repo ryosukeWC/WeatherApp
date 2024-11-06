@@ -1,6 +1,6 @@
 package com.practice.weatherapi
 
-import com.practice.weatherapi.dto.WeatherData
+import com.practice.weatherapi.dto.WeatherDataDTO
 import com.skydoves.retrofit.adapters.result.ResultCallAdapterFactory
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -13,7 +13,7 @@ interface WeatherApi {
     suspend fun getData(
         @Query("latitude") latitude : Double,
         @Query("longitude") longitude : Double
-    ) : Result<WeatherData>
+    ) : Result<WeatherDataDTO>
 }
 
 fun WeatherApi(
