@@ -158,6 +158,7 @@
         app:layout_constraintStart_toStartOf="@id/main_card_container"
         app:layout_constraintTop_toBottomOf="@id/top_card_view"
         app:layout_constraintBottom_toTopOf="@id/bottom_card_view"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_time_weather">
 
     </androidx.recyclerview.widget.RecyclerView>

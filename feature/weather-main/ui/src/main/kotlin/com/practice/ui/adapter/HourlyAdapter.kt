@@ -5,9 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.practice.ui.model.HourlyUi
+import com.practice.ui.logic.model.HourlyUi
 import com.practice.ui.databinding.ItemTimeWeatherBinding
-import com.practice.ui.model.HourlyItem
+import com.practice.ui.logic.model.HourlyItem
 
 class HourlyAdapter : ListAdapter<HourlyItem,HourlyViewHolder>(HourlyDiffCallBack()) {
 

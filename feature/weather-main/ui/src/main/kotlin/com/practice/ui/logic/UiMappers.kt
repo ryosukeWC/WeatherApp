@@ -1,9 +1,9 @@
-package com.practice.ui
+package com.practice.ui.logic
 
-import com.practice.ui.model.CurrentUi
-import com.practice.ui.model.HourlyItem
-import com.practice.ui.model.HourlyUi
-import com.practice.ui.model.WeatherDataUi
+import com.practice.ui.logic.model.CurrentUi
+import com.practice.ui.logic.model.HourlyItem
+import com.practice.ui.logic.model.HourlyUi
+import com.practice.ui.logic.model.WeatherDataUi
 import com.practice.weather.data.model.WeatherData
 
 fun WeatherData.toWeatherDataUi() : WeatherDataUi {

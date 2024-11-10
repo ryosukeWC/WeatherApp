@@ -1,4 +1,4 @@
-package com.practice.ui.model
+package com.practice.ui.logic.model
 
 
 data class HourlyUi(

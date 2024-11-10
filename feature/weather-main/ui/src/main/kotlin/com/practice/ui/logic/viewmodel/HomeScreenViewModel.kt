@@ -1,9 +1,9 @@
-package com.practice.ui.viewmodel
+package com.practice.ui.logic.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.practice.ui.State
-import com.practice.ui.toUiState
+import com.practice.ui.logic.State
+import com.practice.ui.logic.toUiState
 import com.practice.weather.data.WeatherRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

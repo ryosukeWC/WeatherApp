@@ -17,6 +17,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportFragmentManager.beginTransaction().add(binding.fragmentContainer.id,HomeScreen.newInstance()).commit()
+        supportFragmentManager.beginTransaction().replace(binding.fragmentContainer.id,HomeScreen.newInstance()).commit()
     }
 }

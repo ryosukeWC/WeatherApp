@@ -15,14 +15,13 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.practice.location.LocationProvider
-import com.practice.ui.State
+import com.practice.ui.logic.State
 import com.practice.ui.adapter.HourlyAdapter
-import com.practice.ui.viewmodel.HomeScreenViewModel
+import com.practice.ui.logic.viewmodel.HomeScreenViewModel
 import com.practice.ui.databinding.HomeFragmentBinding
-import com.practice.ui.model.WeatherDataUi
-import com.practice.ui.toListHourlyItem
+import com.practice.ui.logic.model.WeatherDataUi
+import com.practice.ui.logic.toListHourlyItem
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
