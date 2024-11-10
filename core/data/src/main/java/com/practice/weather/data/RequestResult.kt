@@ -1,4 +1,4 @@
-package com.practice.weather.data.model
+package com.practice.weather.data
 
 sealed class RequestResult<T>(val data : T? = null, val error : String? = null) {
     class Success<T>(data: T?) : RequestResult<T>(data)

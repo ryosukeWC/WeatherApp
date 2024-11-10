@@ -17,9 +17,9 @@ data class WeatherDataDTO(
     @SerializedName("generationtime_ms")
     val generationtimeMs: Double?,
     @SerializedName("hourly")
-    val hourly: Hourly?,
+    val hourlyDTO: HourlyDTO?,
     @SerializedName("hourly_units")
-    val hourlyUnits: HourlyUnits?,
+    val hourlyUnits: HourlyUnitsDTO?,
     @SerializedName("latitude")
     val latitude: Double?,
     @SerializedName("longitude")

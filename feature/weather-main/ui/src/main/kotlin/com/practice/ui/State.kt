@@ -1,7 +1,7 @@
 package com.practice.ui
 
 import com.practice.ui.model.WeatherDataUi
-import com.practice.weather.data.model.RequestResult
+import com.practice.weather.data.RequestResult
 import com.practice.weather.data.model.WeatherData
 
 sealed class State() {

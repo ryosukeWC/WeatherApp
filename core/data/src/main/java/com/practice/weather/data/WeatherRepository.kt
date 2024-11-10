@@ -1,6 +1,5 @@
 package com.practice.weather.data
 
-import com.practice.weather.data.model.RequestResult
 import com.practice.weather.data.model.WeatherData
 import com.practice.weatherapi.WeatherApi
 import javax.inject.Inject

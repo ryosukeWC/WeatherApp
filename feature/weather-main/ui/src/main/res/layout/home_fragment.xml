@@ -11,7 +11,7 @@
         android:id="@+id/location_container"
         android:layout_width="190dp"
         android:layout_height="40dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="6dp"
         android:background="@drawable/location_shape"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,11 +98,11 @@
     </View>
 
     <TextView
-        android:id="@+id/today_text_view"
+        android:id="@+id/city_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/figtree_semibold"
-        android:text="Сегодня"
+        android:text="@string/city_name"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@id/support_view_for_top_card"
@@ -110,16 +110,16 @@
     </TextView>
 
     <TextView
-        android:id="@+id/date_and_time_text_view"
+        android:id="@+id/date_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/figtree_regular"
         android:layout_marginTop="4dp"
-        android:text="Minggu, 13 Des | 17:00"
+        android:text="Minggu, 13 Des"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@id/support_view_for_top_card"
-        app:layout_constraintTop_toBottomOf="@id/today_text_view">
+        app:layout_constraintTop_toBottomOf="@id/city_text_view">
     </TextView>
 
     <com.google.android.material.textview.MaterialTextView
@@ -131,7 +131,7 @@
         android:textColor="@color/white"
         android:textSize="72sp"
         app:layout_constraintStart_toStartOf="@+id/support_view_for_top_card"
-        app:layout_constraintTop_toBottomOf="@+id/date_and_time_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/date_text_view"
         tools:text="22°C" />
 
     <com.google.android.material.textview.MaterialTextView
@@ -157,7 +157,7 @@
         app:layout_constraintEnd_toEndOf="@id/main_card_container"
         app:layout_constraintStart_toStartOf="@id/main_card_container"
         app:layout_constraintTop_toBottomOf="@id/top_card_view"
-        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/bottom_card_view"
         tools:listitem="@layout/item_time_weather">
 
     </androidx.recyclerview.widget.RecyclerView>
@@ -165,7 +165,7 @@
     <View
         android:id="@+id/bottom_card_view"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="80dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@id/main_card_container"
         app:layout_constraintEnd_toEndOf="@id/main_card_container"
