@@ -25,8 +25,6 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 activity = "1.9.2"
 constraintlayout = "2.1.4"
-legacySupportV4 = "1.0.0"
-lifecycleLivedataKtx = "2.8.6"
 lifecycleViewmodelKtx = "2.8.6"
 fragmentKtx = "1.8.3"
 

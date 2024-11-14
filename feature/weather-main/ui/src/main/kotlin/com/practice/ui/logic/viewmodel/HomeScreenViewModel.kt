@@ -28,7 +28,7 @@ class HomeScreenViewModel @Inject constructor(
 
         _state.value = State.Loading
 
-        viewModelScope.launch(context = Dispatchers.IO) {
+        viewModelScope.launch {
             _state.value = weatherRepository.getWeatherFromServer().toUiState()
         }
     }

@@ -32,11 +32,11 @@ android {
         viewBinding = true
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "21"
     }
 }
 
@@ -54,5 +54,6 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
 
     implementation(project(":core:weatherapi"))
+    implementation(project(":core:data"))
     implementation(project(":feature:weather-main:ui"))
 }

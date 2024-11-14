@@ -1,9 +1,9 @@
-package com.practice.weatherapi
+package com.practice.weather.data.remote
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 
-fun OkHttpClient() : OkHttpClient {
+fun okHttpClientInstance() : OkHttpClient {
 
     val httpLoggingInterceptor = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
 
