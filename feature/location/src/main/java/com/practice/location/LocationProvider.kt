@@ -30,4 +30,8 @@ class LocationProvider(
         }
     }
 
+    private fun isGpsEnabled() {
+
+    }
+
 }

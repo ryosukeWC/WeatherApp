@@ -5,6 +5,11 @@ plugins {
 
 android {
     namespace = "com.example.settings"
+    compileSdk = 34
+
+    defaultConfig {
+        minSdk = 26
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21

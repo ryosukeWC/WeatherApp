@@ -14,7 +14,7 @@
 
         <item name="materialCardViewStyle">@style/YourCardView</item>
 
-        <item name="popupMenuBackground"></item>
+        <item name="popupMenuStyle">@style/CustomPopUpMenuSettings</item>
 
 
     </style>

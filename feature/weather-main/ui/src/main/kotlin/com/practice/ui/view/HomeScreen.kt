@@ -15,6 +15,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.settings.PopMenuInstance
 import com.practice.location.LocationProvider
 import com.practice.ui.logic.State
 import com.practice.ui.adapter.HourlyAdapter
@@ -79,6 +80,12 @@ class HomeScreen : Fragment() {
                 }
             }
         }
+
+        val popUpInstance = PopMenuInstance(requireContext())
+        binding.settingsButton.setOnClickListener {
+            popUpInstance.showPopUpMenu(it)
+        }
+
         // реализовать model класс weatherData для ui
 
         val locationProvider = LocationProvider(requireContext())

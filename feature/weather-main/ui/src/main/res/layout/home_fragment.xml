@@ -146,6 +146,18 @@
         android:textColor="@color/white"
         />
 
+    <ImageButton
+        android:id="@+id/settings_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/support_view_for_top_card"
+        app:layout_constraintTop_toTopOf="@+id/support_view_for_top_card"
+        android:src="@drawable/icon_settings"
+        android:background="@null"
+        tools:ignore="ContentDescription">
+
+    </ImageButton>
+
     <!-- Top card end-->
 
     <androidx.recyclerview.widget.RecyclerView

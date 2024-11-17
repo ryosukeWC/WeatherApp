@@ -56,4 +56,5 @@ dependencies {
     implementation(project(":core:weatherapi"))
     implementation(project(":core:data"))
     implementation(project(":feature:weather-main:ui"))
+    implementation(project(":feature:settings"))
 }

@@ -43,11 +43,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.fragment.ktx)
-    implementation(libs.location)
 
     implementation(libs.hilt)
     ksp(libs.hilt.compiler)
 
     implementation(project(":core:data"))
     implementation(project(":feature:location"))
+    implementation(project(":feature:settings"))
 }

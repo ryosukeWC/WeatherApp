@@ -1,12 +1,17 @@
 plugins {
-    id("java-library")
-    alias(libs.plugins.jetbrains.kotlin.jvm)
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.jetbrains.kotlin.android)
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+android {
+    namespace = "com.practice.weatherapp.core.data"
+    compileSdk = 34
+
+    defaultConfig {
+        minSdk = 26
+    }
 }
+
 
 dependencies {
 
@@ -16,5 +21,7 @@ dependencies {
     implementation(libs.okhttp.logging)
     implementation(libs.okhttp)
 
-    implementation(project(":core:weatherapi"))
+    implementation(libs.location)
+
+    // implementation(project(":core:weatherapi"))
 }
