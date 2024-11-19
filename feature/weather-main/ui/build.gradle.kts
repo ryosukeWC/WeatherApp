@@ -48,6 +48,5 @@ dependencies {
     ksp(libs.hilt.compiler)
 
     implementation(project(":core:data"))
-    implementation(project(":feature:location"))
     implementation(project(":feature:settings"))
 }

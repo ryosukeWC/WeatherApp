@@ -10,8 +10,8 @@ import javax.inject.Inject
 
 class WeatherRepository @Inject constructor(
     private val api : WeatherApi
-    // можем тут что то передать для получения локации
 ) {
+
     suspend fun getWeatherFromServer(latitude : Double, longitude : Double) : RequestResult<WeatherData> {
         return withContext(Dispatchers.IO) {
             api.getData(latitude,longitude).toRequestResultWeatherData()

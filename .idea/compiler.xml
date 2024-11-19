@@ -6,6 +6,7 @@
       <module name="WeatherApp.domain" target="17" />
       <module name="WeatherApp.domain.main" target="17" />
       <module name="WeatherApp.domain.test" target="17" />
+      <module name="WeatherApp.feature.location" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>

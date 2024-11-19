@@ -53,6 +53,8 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
+    implementation(libs.location)
+
     implementation(project(":core:weatherapi"))
     implementation(project(":core:data"))
     implementation(project(":feature:weather-main:ui"))

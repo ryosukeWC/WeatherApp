@@ -20,12 +20,15 @@ class LocationTrackerImpl @Inject constructor(
 
     @SuppressLint("MissingPermission")
     override suspend fun getLocation(): Location? {
+
         if (!isGpsEnabled()) {
             return null
         }
+
         if (!isLocationPermissionGranted()) {
             return null
         }
+
         return suspendCancellableCoroutine { continuation  ->
             fusedLocationProviderClient.lastLocation.addOnSuccessListener { location ->
                 if (location != null) {
@@ -36,6 +39,8 @@ class LocationTrackerImpl @Inject constructor(
                 }
             }.addOnFailureListener {
                 continuation.resume(null)
+            }.addOnCanceledListener {
+                continuation.cancel()
             }
         }
     }

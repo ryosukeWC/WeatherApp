@@ -10,6 +10,15 @@ android {
     defaultConfig {
         minSdk = 26
     }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
+    kotlinOptions {
+        jvmTarget = "21"
+    }
 }
 
 
@@ -23,5 +32,5 @@ dependencies {
 
     implementation(libs.location)
 
-    // implementation(project(":core:weatherapi"))
+    implementation(project(":core:weatherapi"))
 }
