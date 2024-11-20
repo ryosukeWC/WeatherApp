@@ -1,6 +1,5 @@
 package com.practice.ui.logic.viewmodel
 
-import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.practice.ui.logic.State
