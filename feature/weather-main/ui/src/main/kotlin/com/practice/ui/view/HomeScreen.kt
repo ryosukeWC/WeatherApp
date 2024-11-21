@@ -70,6 +70,11 @@ class HomeScreen : Fragment() {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.state.collect { state ->
                     when (state) {
+
+                        is State.Loading -> {
+
+                        }
+
                         is State.Success -> {
                             val data = state.data
                             bindUi(data)

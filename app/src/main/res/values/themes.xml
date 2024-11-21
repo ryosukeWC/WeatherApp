@@ -12,8 +12,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
 
-        <item name="materialCardViewStyle">@style/YourCardView</item>
-
         <item name="popupMenuStyle">@style/CustomPopUpMenuSettings</item>
 
 

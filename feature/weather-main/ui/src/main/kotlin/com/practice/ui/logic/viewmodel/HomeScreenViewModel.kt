@@ -29,6 +29,8 @@ class HomeScreenViewModel @Inject constructor(
             val location = locationTracker.getLocation()
             location?.let {
                 _state.value = weatherRepository.getWeatherFromServer(latitude = it.latitude, longitude = it.longitude).toUiState()
+            } ?: kotlin.run {
+              _state.value = State.Error("Not access to gls location")
             }
         }
     }
