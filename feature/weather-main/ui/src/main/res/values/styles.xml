@@ -3,7 +3,7 @@
     <style name="MainCardViewStyle" parent="Widget.MaterialComponents.CardView">
         <item name="cardForegroundColor">@null</item>
         <item name="cardBackgroundColor">@null</item>
-        <item name="background">@drawable/semi_darkness</item>
+        <item name="background">@drawable/background_semi_darkness</item>
     </style>
 
 </resources>

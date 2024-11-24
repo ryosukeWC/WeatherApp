@@ -10,10 +10,8 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 import android.app.Application
-import androidx.fragment.app.Fragment
 import com.practice.weather.data.repository.WeatherRepository
 import com.practice.weatherapi.WeatherApi
-import dagger.Binds
 
 @Module
 @InstallIn(SingletonComponent::class)

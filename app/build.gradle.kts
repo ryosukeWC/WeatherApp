@@ -43,6 +43,8 @@ android {
 dependencies {
 
     implementation(libs.hilt)
+    implementation(libs.navigation.fragment.ktx)
+    implementation(libs.navigation.ui.ktx)
     ksp(libs.hilt.compiler)
 
     implementation(libs.okhttp)

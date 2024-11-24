@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="gradient_263A99">#263A99</color>
-    <color name="gradient_565FCC">#565FCC</color>
-    <color name="gradient_FFC19E">#FFC19E</color>
+
+    <color name="dawn_start_color">#1E4DC5</color>
+    <color name="dawn_center_color">#61A4E6</color>
+    <color name="dawn_end_color">#FFDDB5</color>
+
+    <color name="get_dark_start_color">#365196</color>
+    <color name="get_dark_center_color">#5576EC</color>
+    <color name="get_dark_end_color">#FFE0B2</color>
+
+    <color name="semi_darkness_start_color">#263A99</color>
+    <color name="semi_darkness_center_color">#565FCC</color>
+    <color name="semi_darkness_end_color">#FFC19E</color>
+
+    <color name="twilight_start_color">#142058</color>
+    <color name="twilight_center_color">#41489A</color>
+    <color name="twilight_end_color">#DE8ABA</color>
+
+    <color name="full_darkness_start_color">#142058</color>
+    <color name="full_darkness_end_color">#454DB7</color>
 
 
     <color name="item_black_text_color">#FF000000</color>

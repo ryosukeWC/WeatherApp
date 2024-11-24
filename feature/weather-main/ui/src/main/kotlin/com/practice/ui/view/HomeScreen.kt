@@ -71,16 +71,22 @@ class HomeScreen : Fragment() {
                 viewModel.state.collect { state ->
                     when (state) {
 
-                        is State.Loading -> {
-
-                        }
+//                        is State.Loading -> {
+//                             буду показывать shimmer placeholder
+//                        }
 
                         is State.Success -> {
+
                             val data = state.data
                             bindUi(data)
                             val test = data.hourlyUi.toListHourlyItem()
                             hourlyAdapter.submitList(test)
                         }
+
+//                        is State.Error -> {
+//                            // буду показывать диалог с ошибкой
+//                        }
+
                         else -> {} // функция для перехода на экран ошибки
                     }
                 }
@@ -96,14 +102,7 @@ class HomeScreen : Fragment() {
     private fun bindUi(dataUi: WeatherDataUi) {
         binding.currentTemperature.text = dataUi.currentUi.temperature2m.toString()
     }
+    private fun selectMainCardBackground() {
 
-//    fun requestLocationPermission() {
-//
-//        val activityResultLauncher = registerForActivityResult(
-//            ActivityResultContracts.RequestPermission()) { isGranted ->
-//
-//            if (isGranted) viewModel.fetchData()
-//        }
-//        activityResultLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
-//    }
+    }
 }

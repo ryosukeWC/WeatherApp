@@ -75,7 +75,7 @@
         android:id="@+id/top_card_view"
         android:layout_width="0dp"
         android:layout_height="250dp"
-        android:background="@drawable/semi_darkness"
+        android:background="@drawable/background_semi_darkness"
         app:layout_constraintEnd_toEndOf="@id/main_card_container"
         app:layout_constraintStart_toStartOf="@id/main_card_container"
         app:layout_constraintTop_toTopOf="@id/main_card_container">

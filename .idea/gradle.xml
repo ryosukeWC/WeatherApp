@@ -16,7 +16,6 @@
             <option value="$PROJECT_DIR$/core/geocoding_api" />
             <option value="$PROJECT_DIR$/core/weatherapi" />
             <option value="$PROJECT_DIR$/feature" />
-            <option value="$PROJECT_DIR$/feature/loading-screen" />
             <option value="$PROJECT_DIR$/feature/settings" />
             <option value="$PROJECT_DIR$/feature/weather-main" />
             <option value="$PROJECT_DIR$/feature/weather-main/ui" />

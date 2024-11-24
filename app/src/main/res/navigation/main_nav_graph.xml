@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/loadingScreenFragment">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.practice.ui.view.HomeScreen"
+        android:label="HomeScreen" />
+    <fragment
+        android:id="@+id/loadingScreenFragment"
+        android:name="com.example.loading_screen.LoadingScreenFragment"
+        android:label="LoadingScreenFragment" >
+        <action
+            android:id="@+id/action_loadingScreenFragment_to_homeScreen"
+            app:destination="@id/homeScreen" />
+    </fragment>
+</navigation>
