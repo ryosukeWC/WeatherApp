@@ -2,7 +2,7 @@
 <resources>
     <style name="CustomPopUpMenuSettings" parent="Widget.Material3.PopupMenu">
         <item name="popupMenuBackground">@drawable/menu_shape</item>
-        <item name="android:textSize">10sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="textAllCaps">true</item>
     </style>
 </resources>

@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.hilt.pligun)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -32,5 +34,9 @@ dependencies {
 
     implementation(libs.location)
 
+    implementation(libs.hilt)
+    ksp(libs.hilt.compiler)
+
     implementation(project(":core:weatherapi"))
+    implementation(project(":core:common"))
 }

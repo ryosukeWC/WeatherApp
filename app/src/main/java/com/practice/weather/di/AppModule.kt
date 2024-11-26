@@ -12,6 +12,7 @@ import javax.inject.Singleton
 import android.app.Application
 import com.practice.weather.data.repository.WeatherRepository
 import com.practice.weatherapi.WeatherApi
+import kotlinx.coroutines.CoroutineDispatcher
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -26,8 +27,4 @@ object AppModule {
     fun provideLocationTracker(fusedLocationProviderClient: FusedLocationProviderClient, application: Application) : LocationTracker = LocationTrackerImpl(
         fusedLocationProviderClient,application
     )
-
-    @Singleton
-    @Provides
-    fun provideRepository(api : WeatherApi) : WeatherRepository = WeatherRepository(api)
 }
