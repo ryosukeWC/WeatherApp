@@ -1,6 +1,6 @@
-package com.practice.weatherapi
+package com.example.network.weather_api
 
-import com.practice.weatherapi.dto.WeatherDataDTO
+import com.example.network.weather_api.dto.WeatherDataDTO
 import com.skydoves.retrofit.adapters.result.ResultCallAdapterFactory
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

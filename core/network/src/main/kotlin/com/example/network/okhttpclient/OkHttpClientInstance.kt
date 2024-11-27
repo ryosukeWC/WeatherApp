@@ -1,4 +1,4 @@
-package com.practice.weather.data.remote
+package com.example.network.okhttpclient
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

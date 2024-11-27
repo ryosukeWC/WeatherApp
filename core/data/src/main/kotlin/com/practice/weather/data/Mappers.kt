@@ -1,9 +1,9 @@
 package com.practice.weather.data
 
+import com.example.network.weather_api.dto.WeatherDataDTO
 import com.practice.weather.data.model.Current
 import com.practice.weather.data.model.Hourly
 import com.practice.weather.data.model.WeatherData
-import com.practice.weatherapi.dto.WeatherDataDTO
 
 fun WeatherDataDTO.toWeatherData() : WeatherData {
 

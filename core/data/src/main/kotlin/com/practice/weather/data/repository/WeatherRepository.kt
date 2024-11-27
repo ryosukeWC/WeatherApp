@@ -4,13 +4,13 @@ import com.practice.weather.common.di.IoDispatcher
 import com.practice.weather.data.RequestResult
 import com.practice.weather.data.model.WeatherData
 import com.practice.weather.data.toRequestResultWeatherData
-import com.practice.weatherapi.WeatherApi
+import com.example.network.weather_api.WeatherApi
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class WeatherRepository @Inject constructor(
-    private val api : WeatherApi,
+    private val api : com.example.network.weather_api.WeatherApi,
     @IoDispatcher private val ioDispatcher: CoroutineDispatcher
 ) {
 

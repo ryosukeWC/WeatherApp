@@ -1,13 +1,13 @@
-package com.practice.weatherapi.dto
+package com.example.network.weather_api.dto
 
 
 import com.google.gson.annotations.SerializedName
 
-data class CurrentUnits(
-    @SerializedName("interval")
-    val interval: String?,
+data class HourlyUnitsDTO(
     @SerializedName("temperature_2m")
     val temperature2m: String?,
+    @SerializedName("relative_humidity_2m")
+    val relativeHumidity2m: String?,
     @SerializedName("time")
     val time: String?
 )

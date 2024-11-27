@@ -37,6 +37,6 @@ dependencies {
     implementation(libs.hilt)
     ksp(libs.hilt.compiler)
 
-    implementation(project(":core:weatherapi"))
     implementation(project(":core:common"))
+    implementation(project(":core:network"))
 }

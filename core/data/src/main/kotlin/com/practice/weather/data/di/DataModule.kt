@@ -1,8 +1,8 @@
 package com.practice.weather.data.di
 
+import com.example.network.weather_api.WeatherApi
 import com.practice.weather.common.di.IoDispatcher
 import com.practice.weather.data.repository.WeatherRepository
-import com.practice.weatherapi.WeatherApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

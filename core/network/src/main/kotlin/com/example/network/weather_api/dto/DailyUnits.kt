@@ -1,4 +1,4 @@
-package com.practice.weatherapi.dto
+package com.example.network.weather_api.dto
 
 
 import com.google.gson.annotations.SerializedName
