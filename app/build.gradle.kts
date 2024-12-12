@@ -32,11 +32,11 @@ android {
         viewBinding = true
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "21"
+        jvmTarget = "1.8"
     }
 }
 
@@ -60,4 +60,5 @@ dependencies {
     implementation(project(":core:data"))
     implementation(project(":feature:weather-main:ui"))
     implementation(project(":feature:settings"))
+    implementation(project(":feature:city-search"))
 }

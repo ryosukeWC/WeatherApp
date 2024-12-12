@@ -158,6 +158,18 @@
 
     </ImageButton>
 
+    <ImageView
+        android:id="@+id/image_view_weather_icon"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/weather_icon"
+        app:layout_constraintBottom_toBottomOf="@id/support_view_for_top_card"
+        app:layout_constraintEnd_toEndOf="@id/support_view_for_top_card">
+
+    </ImageView>
+
     <!-- Top card end-->
 
     <androidx.recyclerview.widget.RecyclerView

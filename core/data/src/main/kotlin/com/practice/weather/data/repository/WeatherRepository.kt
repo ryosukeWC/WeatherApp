@@ -2,9 +2,8 @@ package com.practice.weather.data.repository
 
 import com.practice.weather.common.di.IoDispatcher
 import com.practice.weather.data.RequestResult
-import com.practice.weather.data.model.WeatherData
+import com.practice.weather.data.model.weather.WeatherData
 import com.practice.weather.data.toRequestResultWeatherData
-import com.example.network.weather_api.WeatherApi
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import javax.inject.Inject

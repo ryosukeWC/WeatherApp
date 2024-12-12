@@ -2,6 +2,7 @@ package com.example.network.di
 
 import com.example.network.BuildConfig
 import com.example.network.location_api.LocationApi
+import com.example.network.okhttpclient.locationOkHttpClient
 import com.example.network.okhttpclient.okHttpClientInstance
 import dagger.Module
 import dagger.Provides
@@ -11,7 +12,6 @@ import okhttp3.OkHttpClient
 import javax.inject.Singleton
 import com.example.network.weather_api.WeatherApi
 
-
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
@@ -20,9 +20,13 @@ object NetworkModule {
     @Provides
     fun provideWeatherApi(okHttpClient: OkHttpClient) : WeatherApi = WeatherApi(BuildConfig.BASE_URL_WEATHER_SERVICE,okHttpClient)
 
+//    @Singleton
+//    @Provides
+//    fun provideOkHttpClient() : OkHttpClient = okHttpClientInstance()
+
     @Singleton
     @Provides
-    fun provideOkHttpClient() : OkHttpClient = okHttpClientInstance()
+    fun provideOkHttpClient() : OkHttpClient = locationOkHttpClient()
 
     @Singleton
     @Provides

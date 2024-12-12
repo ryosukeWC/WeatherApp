@@ -54,7 +54,7 @@
             android:id="@+id/weather_icon"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/item_weather_icon"
+            android:src="@drawable/weather_icon"
             tools:ignore="ContentDescription" />
     </LinearLayout>
 

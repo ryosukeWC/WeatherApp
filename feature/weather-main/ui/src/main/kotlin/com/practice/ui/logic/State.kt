@@ -2,7 +2,7 @@ package com.practice.ui.logic
 
 import com.practice.ui.logic.model.WeatherDataUi
 import com.practice.weather.data.RequestResult
-import com.practice.weather.data.model.WeatherData
+import com.practice.weather.data.model.weather.WeatherData
 
 sealed class State() {
 

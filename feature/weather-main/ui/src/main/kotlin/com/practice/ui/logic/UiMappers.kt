@@ -4,7 +4,7 @@ import com.practice.ui.logic.model.CurrentUi
 import com.practice.ui.logic.model.HourlyItem
 import com.practice.ui.logic.model.HourlyUi
 import com.practice.ui.logic.model.WeatherDataUi
-import com.practice.weather.data.model.WeatherData
+import com.practice.weather.data.model.weather.WeatherData
 
 fun WeatherData.toWeatherDataUi() : WeatherDataUi {
 

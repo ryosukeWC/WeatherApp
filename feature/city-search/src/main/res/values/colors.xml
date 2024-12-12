@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="search_icon_color">#bdc8dc</color>
+
+    <color name="query_text_color">#FFFFFF</color>
+
+    <color name="white_text_color">#FFFFFF</color>
+
+
+</resources>

@@ -36,8 +36,8 @@ dependencies {
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
 
-    implementation(libs.hilt)
     ksp(libs.hilt.compiler)
+    implementation(libs.hilt)
 
     implementation(project(":core:data"))
     implementation(project(":feature:settings"))

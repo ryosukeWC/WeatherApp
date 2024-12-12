@@ -18,14 +18,15 @@ android {
 
         buildConfigField("String", "BASE_URL_LOCATION_SERVICE", "\"http://dataservice.accuweather.com/locations/v1/\"");
         buildConfigField("String", "BASE_URL_WEATHER_SERVICE", "\"https://api.open-meteo.com/v1/\"");
+        buildConfigField("String", "API_KEY", "\"9r8H8sS1hHM66DaWRROW2z5nc495LaGp\"")
 
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 

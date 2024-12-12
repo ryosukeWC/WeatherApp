@@ -1,5 +1,6 @@
 package com.example.network.location_api
 
+import com.example.network.location_api.dto.CityDTOItem
 import com.skydoves.retrofit.adapters.result.ResultCallAdapterFactory
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -10,7 +11,7 @@ import retrofit2.http.Query
 interface LocationApi {
 
     @GET("cities/autocomplete")
-    suspend fun autoCompleteCities(@Query("q") query : String, @Query("language") language: String)
+    suspend fun autoCompleteCities(@Query("q") query : String, @Query("language") language: String) : Result<List<CityDTOItem>>
 }
 
 fun LocationApi(

@@ -1,9 +1,9 @@
 package com.practice.weather.data
 
 import com.example.network.weather_api.dto.WeatherDataDTO
-import com.practice.weather.data.model.Current
-import com.practice.weather.data.model.Hourly
-import com.practice.weather.data.model.WeatherData
+import com.practice.weather.data.model.weather.Current
+import com.practice.weather.data.model.weather.Hourly
+import com.practice.weather.data.model.weather.WeatherData
 
 fun WeatherDataDTO.toWeatherData() : WeatherData {
 
@@ -15,7 +15,6 @@ fun WeatherDataDTO.toWeatherData() : WeatherData {
         relativeHumidityList = hourlyDTO?.relativeHumidityList ?: emptyList(),
         time = hourlyDTO?.time ?: emptyList()
     )
-
     return WeatherData(current,hourly)
 }
 
