@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportFragmentManager.beginTransaction().replace(binding.fragmentContainer.id,CitiesSearchFragment.newInstance()).commit()
+        // supportFragmentManager.beginTransaction().replace(binding.fragmentContainer.id,CitiesSearchFragment.newInstance()).commit()
+
+        supportFragmentManager.beginTransaction().replace(binding.fragmentContainer.id, HomeScreen.newInstance()).commit()
     }
 }

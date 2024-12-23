@@ -93,7 +93,7 @@ class HomeScreen : Fragment() {
             }
         }
 
-        val popUpInstance = PopMenuInstance(requireContext())
+        val popUpInstance = PopMenuInstance(requireContext(),this)
         binding.settingsButton.setOnClickListener {
             popUpInstance.showPopUpMenu(it)
         }
