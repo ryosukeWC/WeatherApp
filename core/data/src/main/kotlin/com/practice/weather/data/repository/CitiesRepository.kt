@@ -15,8 +15,8 @@ class CitiesRepository @Inject constructor(
     private val locationApi: LocationApi,
     @IoDispatcher private val ioDispatcher : CoroutineDispatcher
 ) {
-    fun requestCitiesFromServer() : Flow<List<CityItem>> = flow {
-        emit(locationApi.autoCompleteCities("Москва","ru").getOrThrow().map { item ->
+    fun requestCitiesFromServer(query : String) : Flow<List<CityItem>> = flow {
+        emit(locationApi.autoCompleteCities(query,"ru").getOrThrow().map { item ->
             CityItem(
                 administrativeArea = item.administrativeArea?.let {
                     return@let AdministrativeArea(

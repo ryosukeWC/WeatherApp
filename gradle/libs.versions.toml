@@ -29,7 +29,7 @@ constraintlayout = "2.1.4"
 lifecycleViewmodelKtx = "2.8.6"
 fragmentKtx = "1.8.3"
 
-nav_version = "2.8.4"
+nav_version = "2.8.5"
 legacySupportV4 = "1.0.0"
 lifecycleLivedataKtx = "2.8.7"
 

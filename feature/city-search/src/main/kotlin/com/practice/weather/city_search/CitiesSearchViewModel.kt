@@ -20,13 +20,12 @@ class CitiesSearchViewModel @Inject constructor(
     private val _citiesState = MutableStateFlow<List<CityItem>>(emptyList())
     val citiesState: StateFlow<List<CityItem>> = _citiesState
 
-    init {
-        fetchCities()
-    }
+    private val _queryState = MutableStateFlow<String>("")
+    val queryState : StateFlow<String> = _queryState
 
-    private fun fetchCities() {
+    fun fetchCities(queryCity : String) {
         viewModelScope.launch {
-            citiesRepository.requestCitiesFromServer()
+            citiesRepository.requestCitiesFromServer(queryCity)
                 .catch { e ->
                     Log.e("HttpException", e.message.toString())
                 }

@@ -65,8 +65,9 @@ class CitiesSearchFragment : Fragment() {
 
             override fun onQueryTextChange(newText: String?): Boolean {
 
-                // viewModel.getCities()
-
+                if (newText != null) {
+                    viewModel.fetchCities(newText)
+                }
                 return true
             }
 
