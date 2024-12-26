@@ -6,12 +6,14 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.widget.PopupMenu
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import com.example.api.NavigationApi
+import javax.inject.Inject
 
-class PopMenuInstance @Inject constructor(
+class PopMenuInstance(
     private val context : Context,
-    private val fragment : Fragment,
+    private val navController: NavController,
     private val navApi : NavigationApi
 ) {
 
@@ -20,8 +22,8 @@ class PopMenuInstance @Inject constructor(
         val popUpMenu = PopupMenu(context,view)
         popUpMenu.menuInflater.inflate(R.menu.settings_menu,popUpMenu.menu)
 
-        val nav = fragment as NavHostFragment
-        val navController = nav.navController
+//        val nav = fragment as NavHostFragment
+//        val navController = nav.navController
 
         popUpMenu.setOnMenuItemClickListener(object : PopupMenu.OnMenuItemClickListener {
             override fun onMenuItemClick(item: MenuItem?): Boolean {

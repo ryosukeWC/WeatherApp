@@ -12,8 +12,10 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.settings.PopMenuInstance
+import com.example.settings.PopMenuInstanceFactory
 import com.practice.ui.logic.State
 import com.practice.ui.adapter.HourlyAdapter
 import com.practice.ui.logic.viewmodel.HomeScreenViewModel
@@ -22,9 +24,13 @@ import com.practice.ui.logic.model.WeatherDataUi
 import com.practice.ui.logic.toListHourlyItem
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class HomeScreen : Fragment() {
+
+    @Inject
+    lateinit var popUpMenuInstanceFactory : PopMenuInstanceFactory
 
     companion object {
         fun newInstance() = HomeScreen()
@@ -93,9 +99,12 @@ class HomeScreen : Fragment() {
             }
         }
 
-        val popUpInstance = PopMenuInstance(requireContext(),this)
+        val navController = findNavController()
+
+        val popUpInstance = popUpMenuInstanceFactory.create(navController)
+
         binding.settingsButton.setOnClickListener {
-            popUpInstance.showPopUpMenu(it)
+            popUpInstance.showPopUpMenu(binding.root)
         }
     }
 

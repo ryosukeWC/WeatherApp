@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.hilt.pligun)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -25,7 +27,11 @@ dependencies {
     implementation(libs.navigation.fragment.ktx)
     implementation(libs.navigation.ui.ktx)
 
+    ksp(libs.hilt.compiler)
+    implementation(libs.hilt)
+
     implementation(project(":core:navigation:api"))
     implementation(project(":feature:city-search"))
+    implementation(project(":feature:weather-main:ui"))
 
 }

@@ -55,9 +55,14 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
 
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.fragment.ktx)
+
     implementation(libs.location)
 
     implementation(project(":core:data"))
+    implementation(project(":core:navigation:api"))
+    implementation(project(":core:navigation:impl"))
     implementation(project(":feature:weather-main:ui"))
     implementation(project(":feature:settings"))
     implementation(project(":feature:city-search"))

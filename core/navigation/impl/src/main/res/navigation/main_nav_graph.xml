@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.practice.ui.view.HomeScreen"
+        android:label="HomeScreen" >
+        <action
+            android:id="@+id/action_homeScreen_to_citiesSearchFragment2"
+            app:destination="@id/citiesSearchFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/citiesSearchFragment2"
+        android:name="com.practice.weather.city_search.CitiesSearchFragment"
+        android:label="CitiesSearchFragment" />
+</navigation>
